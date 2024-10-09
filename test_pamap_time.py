@@ -69,6 +69,9 @@ def run():
                 a = A[t:t+1, :]
                 timestamp = timestamps[t]
 
+                # Define A_w as the past N rows up to time t
+                A_w = A[max(0, t+1-N): t+1]
+
                 start_time = time.process_time_ns()
                 swfd.fit(a, t)
                 # max_size = max(max_size, asizeof(swfd))
