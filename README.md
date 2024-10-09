@@ -20,13 +20,13 @@ Open the folder in VS Code and choose "Reopen in Container" when prompted
 
 Once the container is built, it will automatically:
 
-Install the necessary dependencies.
-Download the datasets.
-Run the initial setup scripts.
+- Install the necessary dependencies
+- Make the initial setup
+- Download the datasets if necessary
+- Run the data generation scripts
 
-If not using the container
 
-Then you can import it in your project folder:
+You can import this in your project folder as follows:
 
 ```python
 from swfd import SeqBasedSWFD
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
 ## Run experimental scripts
 
-The filenames of experimental scripts are prefixed with `test_*.py`.
+The filenames of the experimental scripts are prefixed with `test_*.py`.
 
 Usage example:
 
@@ -60,5 +60,5 @@ Usage example:
 python test_bibd.py -m ours
 ```
 
-Other possible methods besides ours: lmfd, difd, swr, swor
+Other possible methods besides "ours": lmfd, difd, swr, swor
 The results will be generated under logs/
