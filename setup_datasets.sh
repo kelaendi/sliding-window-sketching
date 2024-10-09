@@ -2,9 +2,7 @@
 
 # Create dataset folder (and throw no exception of already exists)
 mkdir -p dataset
-
-# Generate SYNTHETIC data
-python generate_synthetic.py    
+mkdir -p logs   
 
 # Download BIBD data if not already there
 if [ ! -f ./dataset/bibd_22_8.mat ]; then
@@ -47,3 +45,9 @@ if [ ! -f ./dataset/yearpredictionmsd.txt ]; then
 else
     echo "YEAR data already exists. Skipping download."
 fi
+
+# Generate further needed data
+python generate_synthetic.py
+python generate_rail.py
+python generate_pamap.py
+python generate_year.py
