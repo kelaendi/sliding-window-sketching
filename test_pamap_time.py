@@ -23,7 +23,7 @@ def run():
     df = pd.read_csv(
         f"dataset/PAMAP2_Dataset/Protocol/subject103.dat", delim_whitespace=True
     )
-    timestamps = scipy.io.loadmat("dataset/_timestamp2.mat")["t"][0]
+    timestamps = scipy.io.loadmat("dataset/pamap_timestamp2.mat")["t"][0]
     A = df.values.astype(np.float64)
     A = A[:, 2:]
     A[np.isnan(A)] = 1
@@ -70,7 +70,7 @@ def run():
                 timestamp = timestamps[t]
 
                 start_time = time.process_time_ns()
-                swfd.fit(a)
+                swfd.fit(a, t)
                 # max_size = max(max_size, asizeof(swfd))
                 end_time = time.process_time_ns()
                 elapsed_time = end_time - start_time
