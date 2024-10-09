@@ -1,43 +1,30 @@
-# Install dependencies
+# Matrix Sketching over Sliding Windows
 
-```bash
-pip install -r requirements.txt
-```
+## Prerequisites
 
-# Prepare datasets
+You will need the following tools installed:
 
-```bash
-mkdir dataset
+- [Docker](https://docs.docker.com/get-docker/)
+- [VS Code](https://code.visualstudio.com/) with [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-# Generate SYNTHETIC data
-python generate_synthetic.py    
-
-# Download BIBD data
-wget https://www.cise.ufl.edu/research/sparse/mat/JGD_BIBD/bibd_22_8.mat --directory-prefix ./dataset 
-
-# Download PAMAP2 data
-wget https://archive.ics.uci.edu/static/public/231/pamap2+physical+activity+monitoring.zip -o dataset/PAMAP2_Dataset.zip
-unzip dataset/PAMAP2_Dataset.zip -d dataset
-
-# Download RAIL data
-wget https://www.cise.ufl.edu/research/sparse/mat/Mittelmann/rail2586.mat --directory-prefix ./dataset 
-
-# Download YEAR data
-wget https://archive.ics.uci.edu/static/public/203/yearpredictionmsd.zip --directory-prefix ./dataset 
-unzip dataset/yearpredictionmsd.zip -d dataset
-```
-
-# Run experimental scripts
-
-The filenames of experimental scripts are prefixed with `test_*.py`.
-
-# Installation & Usage
+## Installation & Usage
 
 Under your project folder, pull this git repository:
 
 ```bash
-git clone https://github.com/yinhanyan/DS-FD.git swfd --depth 1
+git clone https://github.com/kelaendi/sliding-window-sketching.git swfd --depth 1
 ```
+
+Open the folder in VS Code and choose "Reopen in Container" when prompted
+(also searcheable in commad palette with ctrl+shift+P).
+
+Once the container is built, it will automatically:
+
+Install the necessary dependencies.
+Download the datasets.
+Run the initial setup scripts.
+
+If not using the container
 
 Then you can import it in your project folder:
 
@@ -62,3 +49,7 @@ if __name__ == "__main__":
     B_t, _, _, delta = sw_fd.get()
     print(B_t)
 ```
+
+## Run experimental scripts
+
+The filenames of experimental scripts are prefixed with `test_*.py`.
