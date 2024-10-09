@@ -35,4 +35,4 @@ if __name__ == "__main__":
 
     t = np.array(t)
     mdic = {"t": t}
-    scipy.io.savemat("dataset/rail582_timestamp2.mat", mdic)
+    scipy.io.savemat("dataset/rail_timestamp.mat", mdic)
