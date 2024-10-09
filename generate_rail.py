@@ -8,7 +8,7 @@ if __name__ == "__main__":
     mu = 2
 
     A = scipy.io.loadmat(
-        "dataset/rail582.mat")['Problem'][0][0][7].T
+        "dataset/rail2586.mat")['Problem'][0][0][7].T
     A = A.astype(np.float64)
 
     n, d = A.shape
