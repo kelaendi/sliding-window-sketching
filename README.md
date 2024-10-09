@@ -53,3 +53,12 @@ if __name__ == "__main__":
 ## Run experimental scripts
 
 The filenames of experimental scripts are prefixed with `test_*.py`.
+
+Usage example:
+
+```bash
+python test_bibd.py -m ours
+```
+
+Other possible methods besides ours: lmfd, difd, swr, swor
+The results will be generated under logs/
