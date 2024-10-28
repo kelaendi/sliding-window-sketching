@@ -1,5 +1,5 @@
-from frequent_directions import FrequentDirectionsWithDump
-from fastfdwithdump import FastFrequentDirectionsWithDump
+from .frequent_directions import FrequentDirectionsWithDump
+from .fastfdwithdump import FastFrequentDirectionsWithDump
 import numpy as np
 import numpy.typing as npt
 from dataclasses import dataclass, field

@@ -1,4 +1,4 @@
-from sliding_windows_frequent_directions import FastSlidingWindowFD, SlidingWindowFD
+from .sliding_windows_frequent_directions import FastSlidingWindowFD, SlidingWindowFD
 import numpy as np
 import numpy.typing as npt
 from typing import Dict
@@ -408,8 +408,7 @@ def test_bank():
 
         mdic = {"l": l, 'N': N, 'd': d, 'R': R,
                 'epochs': epochs, 'A': A, 'B': B, 'deltas': deltas}
-        file_path = f"results/result_bank_l={
-            l},N={N},d={d},epochs={epochs}"
+        file_path = f"results/result_bank_l={l},N={N},d={d},epochs={epochs}"
         file_path += ".mat"
         savemat(file_path, mdic)
         print(file_path)
