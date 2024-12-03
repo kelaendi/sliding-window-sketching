@@ -5,7 +5,7 @@ from collections import deque
 from typing import Dict
 from scipy import linalg
 from copy import deepcopy
-from frequent_directions import RobustFrequentDirections
+from .frequent_directions import RobustFrequentDirections
 
 
 @dataclass

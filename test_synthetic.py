@@ -85,8 +85,7 @@ def run():
                     A_wB_w = linalg.norm(A_w.T @ A_w - B_t.T@B_t, 2)
 
                     if eA_f - A_wB_w < 0:
-                        print(f"l={l}, t={t}, A_wB_w={A_wB_w}, eA_f={
-                            eA_f}, error = {eA_f - A_wB_w}")
+                        print(f"l={l}, t={t}, A_wB_w={A_wB_w}, eA_f={eA_f}, error = {eA_f - A_wB_w}")
 
                     relative_error = A_wB_w/A_f
                     max_error = max(max_error, relative_error)
@@ -101,8 +100,7 @@ def run():
             results[l] = {"max_error": max_error, "avg_error": avg_error,
                           "avg_update_time": avg_update_time, "avg_query_time": avg_query_time, "max_size": max_size}
 
-            f.write(f"l={l}, max_error={max_error}, avg_error={avg_error}, avg_update_time={
-                    avg_update_time}, avg_query_time={avg_query_time}, max_size={max_size}\n")
+            f.write(f"l={l}, max_error={max_error}, avg_error={avg_error}, avg_update_time={avg_update_time}, avg_query_time={avg_query_time}, max_size={max_size}\n")
 
         with open(f"logs/synthetic,{method},epochs={epochs},d={d},l={l},N={N}.pkl", "wb") as f:
             pickle.dump(results, f)
